@@ -1,0 +1,18 @@
+form {
+  border-collapse: separate;
+  border-spacing: 50px 0; }
+  form textarea {
+    resize: none;
+    height: 105px;
+    width: 250px; }
+  form td {
+    padding: 10px 0px 10px 25px; }
+
+#wrapper {
+  padding-top: 150px; }
+
+#celda-mala-1 {
+  position: relative;
+  top: 1px; }
+
+/*# sourceMappingURL=estilo.css.map */
