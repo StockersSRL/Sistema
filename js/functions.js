@@ -32,9 +32,6 @@ $(document).ready(function(){
                     $('#searchheader').css("margin-top", "50px");
                     $('#content').css("margin-top", "190px")
                 }
-                $('#lupa').remove();
-                $('#usr').remove();
-                $('#bordee').remove();
             }else{
                 $('#subheader').css("margin-top", "90px");
                 $('#subheader').css("height", "35px");
@@ -48,10 +45,7 @@ $(document).ready(function(){
                     $('#searchheader').css("margin-top", "125px");
                     $('#content').css("margin-top", "160px")
                 }
-                 $('#searchc').html('<img id="lupa" class="slide" src="images/lupa.svg" width="35px"/>'+
-                                    '<div class="borde2" id="bordee"></div>'+
-                                    '<img id="usr" class="slide" src="images/usr.svg" width="35px" style="float:right; margin-right:10px;"/>');
-                
+                              
             }
     }
     
