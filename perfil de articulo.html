@@ -1,0 +1,114 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!----sfddsfds-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!---<script src="https://code.jquery.com/jquery-1.10.2.js"></script>--->
+     <script src="js/functions.js"></script>
+     <script src="js/colors.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+    <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" media="all" />
+        <title>[StockMGR]</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+<body>
+          
+	<div id="header">
+        <img id="dmenu" src="images/rayas.svg" />
+        <center>
+           <img id="limage" src="images/logo.svg" height="40px" style="margin-top: 15px; position:static; max-width: 425px;"/>
+            <p id="date" style="margin-top:7px;">Domingo 2 de Agosto, 2015 - 16:55</p>
+        </center>
+       <div id="searchc">            
+           <img id="lupa" class="slide" src="images/lupa.svg" width="35px"/>
+           <div class="borde2" id="bordee"></div>
+           <img id="usr" class="slide" src="images/usr.svg" width="35px" style="float:right; margin-right:10px;"/>
+       </div>
+         <div id="nombre" style="z-index: 8; margin-left: 45px; margin-top: -15px;">Marcos, SysAdmin</div>
+       
+         <img id="rayas" src="images/noti.svg" height="60px" style="float:left; margin-left: 30px; margin-top: -25px; z-index:3;"/>
+    </div>
+    <div id="empresa">Talmet</div>
+    <div id="subheader" class="noselect">
+        <img id="logo2" src="images/logo.svg" height="25px" style="margin-top: 12.5px; float: left; margin-left: 10px;"/>
+            <ul id="menu">
+                <strong>
+                <a><li id="1" class="sizable" style="border-top: thick solid #5F64B7;">Principal</li></a>
+                <div class="borde"></div>
+                <a><li id="2" class="sizable" style="border-top: thick solid #68B4FA;">Clientes</li></a>
+                <div class="borde"></div>
+                <a><li id="3" class="sizable" style="border-top: thick solid #C53139;">Usuarios</li></a>
+                <div class="borde"></div>
+                <a><li id="4" class="sizable" style="border-top: thick solid green;">Stock</li></a>
+                <div class="borde"></div>
+                <a><li id="5" class="sizable" style="border-top: thick solid #EF8B13;">Estadísticas</li></a>
+                <div class="borde"></div>
+                <a><li id="6" class="sizable" style="border-top: thick solid #52206E;">Facturas</li></a>
+                </strong>
+            </ul>
+    </div>
+    <div id="searchheader" class="noselect">
+        <form>
+        <label class="bu" for="buscar"><strong>Buscar en el sistema: </strong></label><input class="bu" type="text" name="buscar"/><input type="submit" value="Ir" style="padding-left: 3px; padding-right:3px; margin-right: 5px;">
+        </form>
+    </div>
+    <ul id="usermenu" style="z-index: 87;">
+               <div id="tri2" ></div>
+               <li class="cm2"><center>Not 1</center></li>
+               <li class="cm2"><center>Not 2</center></li>
+               <li class="cm2"><center>  Cerrar Sesión  </center></li>
+    </ul>
+   
+    <div id="wrapper">
+       <div class="panel panel-primary">
+         <div class="panel-heading"><a href="#" class="titulo-codigo"><h3>#Codigo del articulo</h3></a> <a href="#" class="titulo-nombre">Nombre del articulo</a></div>
+           <div class="panel-body">
+             <div class="row">
+                <div class="col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="images/canilla.png" alt="...">
+                    </a>
+                </div>
+                 <div class="col-md-10">
+                 <div class="row">
+                 <div class="col-md-3">
+                    <h3>Nombre:</h3> Canilla cromada<br>
+                    <h3>Proveedor:</h3> campo opcional<br>
+                </div>
+                <div class="col-md-2">
+                    <h3>Codigo:</h3> #23123<br>
+                    <h3>Precio:</h3> $1232<br>
+                </div>
+                 <div class="col-md-7" >
+                     Descripción:
+                     <div class="panel panel-default panel-descripcion">
+                         <div class="panel-body">
+                            Descripcion del articulo
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+elems.forEach(function(html) {
+  var switchery = new Switchery(html);
+});
+</script>
+    <div id="scrollup" style="z-index:8; position:fixed; bottom:0%; float:right;"><img src="images/up.svg" width="30px"/></div>
+</body>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    
+</html>
