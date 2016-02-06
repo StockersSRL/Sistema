@@ -87,7 +87,7 @@ body {
 #dmenu {
   float: left;
   margin-left: 18px;
-  height: 30px;
+  height: 55px;
   margin-top: 18px; }
 
 /*SUBHEADER*/
@@ -130,7 +130,7 @@ li img {
   margin-left: 6px; }
 
 #menu {
-  width: 550px;
+  width: 580px;
   margin: 0 auto; }
 
 #menu a li, #menu li, #configm li {
@@ -261,18 +261,10 @@ li {
   background-color: #C0C0C0;
   border-bottom: 3px solid #C0C0C0; }
 
+#usr:hover {
+  content: url(../images/usrA.svg); }
+
+#lupa:hover {
+  content: url(../images/lupaA.svg); }
+
 /*# sourceMappingURL=style.css.map */
-
-.titulo-codigo {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-a.titulo-codigo:hover{
-    color: black;
-}
-
-.titulo-nombre, a.titulo-nombre:hover{
-    color: white;
-}

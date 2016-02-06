@@ -44,8 +44,7 @@ $(document).ready(function(){
                 if($('#searchheader').is(":visible")){
                     $('#searchheader').css("margin-top", "125px");
                     $('#content').css("margin-top", "160px")
-                }
-                              
+                }                
             }
     }
     
@@ -59,9 +58,9 @@ $(document).ready(function(){
             $('#subheader').hide();
             $('#dmenu').show();
             $('#header').css("position", "fixed");
-            $('#usr').css("margin-top", "18px");
+            $('#usr').css("margin-top", "0px");
             $('#usr').css("margin-right", "18px");
-            $('#header').css("height", "60px");
+            $('#header').css("height", "90px");
             $('#logo').css("height", "30px");
             $('#content').css("margin-top", "80px");
             $('#limage').css("margin-left", "-50px");
@@ -131,8 +130,6 @@ $(document).ready(function(){
     });
     
     $('#lupa').click(function(){
-        $("#lupa").animate({ width : "-=5px"}, "slow");
-        $("#lupa").animate({ width : "+=5px"}, "slow");
         searchf();
     });
     
