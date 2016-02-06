@@ -16,6 +16,7 @@ $(document).ready(function(){
     function scroller(){
     var scroll = $(window).scrollTop();
             if (scroll >= 20){
+                $('#subheader').css("position", "fixed");
                 $('#subheader').css("margin-top", "0px");
                 $('#subheader').css("height", "50px");
                 $('.sizable').css("height", "40px");
@@ -65,7 +66,7 @@ $(document).ready(function(){
             $('#logo').css("height", "30px");
             $('#content').css("margin-top", "80px");
             $('#limage').css("margin-left", "-50px");
-            $('#usermenu').css("margin-left", "-10px");
+            $('#usermenu').css("margin-right", "75px");
             $('#tri2').css("margin-right", "-60px");
             if(movido){
                     $('#searchc').animate({"margin-right": '-='+input_width}, "slow");
@@ -73,6 +74,9 @@ $(document).ready(function(){
                     movido=false;
             }
         }else{
+            if($('#mmenu').is(':visible')){
+                $('#mmenu').hide();
+            }
             $('#co').show();
             $('#usr').css("margin-top", "0px");
             $('#usr').css("margin-right", "10px");
@@ -86,7 +90,7 @@ $(document).ready(function(){
             $('#header').css("height", "90px");
             $('#logo').css("height", "40px");
             $('#content').css("margin-top", "130px");
-            $('#usermenu').css("margin-left", "0px");
+            $('#usermenu').css("margin-right", "80px");
             $('#tri2').css("margin-right", "0px");
             $('#limage').css("margin-left", "0px");
         }
@@ -184,5 +188,21 @@ $(document).ready(function(){
         var total_width = $(window).width();
         scroller();
         mobile();
+    });
+    var rayas = 1;
+	$('#mmenu').hide();
+	$('#dmenu').click(function(){
+		if($("#mmenu").is(":hidden")){
+						$("#mmenu").fadeIn(1000);
+				  } else {
+					    $("#mmenu").hide();
+				  }
+	});
+	$('#dmenu').click(function () {
+        if(rayas == 1){
+			rayas = 0;
+		}else{
+			rayas = 1;
+		}
     });
 });

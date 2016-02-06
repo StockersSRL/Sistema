@@ -36,11 +36,11 @@ body {
   border-top: none;
   border-bottom: thin solid #C0C0C0;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   transition: background-color 0.5s ease;
   background-color: white;
-  min-height: 65px;
-  overflow: hidden; }
+  min-width: 540px;
+  min-height: 65px; }
 
 #lupa {
   z-index: 3;
@@ -88,6 +88,7 @@ body {
   float: left;
   margin-left: 18px;
   height: 55px;
+  width: 71px;
   margin-top: 18px; }
 
 /*SUBHEADER*/
@@ -98,7 +99,7 @@ body {
   height: 35px;
   border-top: thin solid #C0C0C0;
   border-bottom: thin solid #C0C0C0;
-  position: fixed;
+  position: absolute;
   background: white;
   text-align: center;
   cursor: pointer; }
@@ -172,16 +173,17 @@ li {
 
 /*CONTENT*/
 #content {
-  position: absolute; }
+  position: absolute;
+  color: white; }
 
 /*MENU NOTI*/
 #usermenu {
   display: block;
   position: fixed;
-  opacity: 0.92;
+  opacity: 0.98;
   width: 60px;
   z-index: 98;
-  margin-right: 75px;
+  margin-right: 80px;
   float: right;
   right: 15;
   cursor: pointer;
@@ -272,5 +274,38 @@ li {
 
 #co:hover {
   content: url(../images/configA.svg); }
+
+/*mobile*/
+.cm {
+  padding: 10px 10px 10px 10px;
+  background-color: #386DFF;
+  text-align: left;
+  font-style: normal;
+  color: white;
+  font-size: 22px;
+  border-bottom: 3px solid #386DFF; }
+
+#ummenu {
+  display: block;
+  position: absolute;
+  z-index: 3; }
+
+.cm {
+  width: 50%;
+  cursor: pointer; }
+
+#ummenu li {
+  float: left;
+  color: white; }
+
+#ummenu li:hover {
+  background-color: #4C7CFF;
+  border-bottom: 3px solid #4C7CFF; }
+
+#mmenu {
+  position: fixed;
+  margin-top: 75px;
+  z-index: 1;
+  width: 400px; }
 
 /*# sourceMappingURL=style.css.map */
