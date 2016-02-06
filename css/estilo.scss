@@ -1,24 +1,26 @@
-.form{
-    
-}
-form{
-    border-collapse: separate;
-    border-spacing: 50px 0;
-    textarea {
-        resize: none;
-        height: 105px;
-        width: 250px;
-    }
-    td{
-        padding: 10px 0px 10px 25px;
-    }
-}
+form {
+  border-collapse: separate;
+  border-spacing: 50px 0; }
+  form textarea {
+    resize: none;
+    height: 105px;
+    width: 250px; }
+  form td {
+    padding: 10px 0px 10px 25px; }
 
-#wrapper{
-    padding-top: 150px;
+#wrapper {
+  padding-top: 150px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #celda-mala-1 {
-    position: relative;
-    top: 6px;
+  position: relative;
+  top: 6px; }
+
+/*# sourceMappingURL=estilo.css.map */
+
+.panel-descripcion {
+    height: 20%
 }

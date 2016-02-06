@@ -130,7 +130,7 @@ li img {
   margin-left: 6px; }
 
 #menu {
-  width: 590px;
+  width: 550px;
   margin: 0 auto; }
 
 #menu a li, #menu li, #configm li {
@@ -262,3 +262,17 @@ li {
   border-bottom: 3px solid #C0C0C0; }
 
 /*# sourceMappingURL=style.css.map */
+
+.titulo-codigo {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+a.titulo-codigo:hover{
+    color: black;
+}
+
+.titulo-nombre, a.titulo-nombre:hover{
+    color: white;
+}
