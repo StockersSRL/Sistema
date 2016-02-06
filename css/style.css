@@ -181,11 +181,11 @@ li {
   opacity: 0.92;
   width: 60px;
   z-index: 98;
-  margin-right: 80px;
+  margin-right: 75px;
   float: right;
   right: 15;
   cursor: pointer;
-  margin-top: 75px;
+  margin-top: 85px;
   font-size: 12; }
 
 #tri2 {
@@ -266,5 +266,11 @@ li {
 
 #lupa:hover {
   content: url(../images/lupaA.svg); }
+
+#dmenu:hover {
+  content: url(../images/rayasA.svg); }
+
+#co:hover {
+  content: url(../images/configA.svg); }
 
 /*# sourceMappingURL=style.css.map */

@@ -53,6 +53,7 @@ $(document).ready(function(){
         if(total_width<1034){
             $('#lupa').hide();
             $('#rayas').hide();
+            $('#co').hide();
             $('#nombre').hide();
             $('#date').hide();
             $('#subheader').hide();
@@ -72,6 +73,7 @@ $(document).ready(function(){
                     movido=false;
             }
         }else{
+            $('#co').show();
             $('#usr').css("margin-top", "0px");
             $('#usr').css("margin-right", "10px");
             $('#lupa').show();
