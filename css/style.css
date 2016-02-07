@@ -77,7 +77,8 @@ body {
   margin-left: none;
   margin-right: 0px;
   margin-right: 0px;
-  right: 20px; }
+  right: 20px;
+  text-align: right; }
 
 #exit {
   float: right;
@@ -87,9 +88,9 @@ body {
 #dmenu {
   float: left;
   margin-left: 18px;
-  height: 55px;
-  width: 71px;
-  margin-top: 18px; }
+  height: 45px;
+  width: 58px;
+  margin-top: 25px; }
 
 /*SUBHEADER*/
 #subheader {

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+    var scroll;
     window.setInterval(bug, 100);
     
     var total_width = $(window).width();
@@ -14,7 +14,7 @@ $(document).ready(function(){
     }
     
     function scroller(){
-    var scroll = $(window).scrollTop();
+    scroll = $(window).scrollTop();
             if (scroll >= 20){
                 $('#subheader').css("position", "fixed");
                 $('#subheader').css("margin-top", "0px");
@@ -33,6 +33,25 @@ $(document).ready(function(){
                     $('#searchheader').css("margin-top", "50px");
                     $('#content').css("margin-top", "190px")
                 }
+                
+                $('#usr').css("position","fixed");
+                $('#co').css("position","fixed");
+                $('#co').css("margin-right","100px");
+                $('#co').css("right","30px");
+                $('#co').css("top","-1e-05px");
+                $('#co').css("margin-top","4px");
+                $('#lupa').css("position","fixed");
+                $('#lupa').css("float","right");
+                $('#lupa').css("z-index","9");
+                $('#lupa').css("top","2px");
+                $('#lupa').css("right","1px");
+                $('#lupa').css("margin-right","10px");
+                $('#lupa').css("margin-top","2px");
+                $('#usr').css("margin-top","10px");
+                $('#usr').css("right","60px");
+                $('#usr').css("margin-top","-20px");
+                 $('#usermenu').css("margin-right", "66px");
+                $('#usermenu').css("margin-top", "65px");
             }else{
                 $('#subheader').css("margin-top", "90px");
                 $('#subheader').css("height", "35px");
@@ -45,7 +64,23 @@ $(document).ready(function(){
                 if($('#searchheader').is(":visible")){
                     $('#searchheader').css("margin-top", "125px");
                     $('#content').css("margin-top", "160px")
-                }                
+                }
+                $('#usr').css("position","relative");
+                $('#usr').css("margin-top","0px");
+                $('#co').css("position","relative");
+                $('#co').css("top","0px");
+                $('#co').css("margin-top","0px");
+                $('#lupa').css("margin-top","0px");
+                $('#lupa').css("margin-right","30px");
+                $('#lupa').css("position","relative");
+                $('#co').css("margin-right","10px");
+                $('#co').css("right","0px");
+                $('#usr').css("margin-right","10px");
+                $('#usr').css("right","0px");
+                $('#lupa').css("top","0px");
+                $('#lupa').css("right","0px");
+                $('#usermenu').css("margin-right", "80px");
+                $('#usermenu').css("margin-top", "85px");
             }
     }
     
@@ -100,6 +135,11 @@ $(document).ready(function(){
         if($('#searchheader').is(":hidden")){
             $('#searchheader').show();
             $('#content').css("margin-top", "160px");
+            if(scroll>20){
+                $('#searchheader').css("margin-top", "50px");
+            }else{
+                $('#searchheader').css("margin-top", "125px");
+            }
         }else{
             $('#searchheader').hide();
             $('#content').css("margin-top", "130px");
