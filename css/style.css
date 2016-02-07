@@ -310,4 +310,22 @@ li {
   z-index: 3;
   width: 400px; }
 
+/*MENUES INTERNOS*/
+#listaInt1 {
+  position: fixed;
+  margin-top: -2px;
+  width: 200px;
+  background-color: #5a64b7;
+  margin-left: -10px;
+  color: white;
+  overflow: hidden; }
+
+.li1 {
+  color: white;
+  width: 200px;
+  text-align: left; }
+
+.li1:hover {
+  background-color: #9197C9; }
+
 /*# sourceMappingURL=style.css.map */

@@ -15,6 +15,7 @@ $(document).ready(function(){
     }
     
     function adaptar(){
+                $('#listaInt1').css("margin-top", "-2px");
                 $('#subheader').css("margin-top", "90px");
                 $('#subheader').css("height", "35px");
                 $('.sizable').css("height", "30px");
@@ -55,6 +56,7 @@ $(document).ready(function(){
                 $('.sizable').css("padding-top", "5px");
                 $('.borde').css("height", "50px");
                 $('#scrollup').fadeIn(500);
+                $('#listaInt1').css("margin-top", "8px");
                 $('#logo2').fadeIn(500);
                 if(movido){
                     $('#searchc').animate({"margin-right": '-='+input_width}, "slow");
@@ -171,6 +173,7 @@ $(document).ready(function(){
     $('#usermenu').hide();
     $('#dmenu').hide();
     $('#searchheader').hide();
+    $('#listaInt1').hide();
     
     var movido = false;
     
@@ -264,5 +267,11 @@ $(document).ready(function(){
 		}else{
 			rayas = 1;
 		}
+    });
+    $( "#1" ).mouseover(function() {
+        $('#listaInt1').show();
+    });
+    $( "#1" ).mouseout(function() {
+        $('#listaInt1').hide();
     });
 });
