@@ -68,7 +68,7 @@ body{
     @include dimensions(100%, 90px);
     @include border(none, thin solid $gray);
 	position: absolute;
-	z-index: 2;
+	z-index: 4;
 	transition: #{$bcolor} 0.5s ease;
     #{$bcolor}:white;
     min-width: 540px;
@@ -310,6 +310,7 @@ background-color: gray;
 	#ummenu li{
 	float: left;
 	color: white;
+    z-index: 3;
 	}
 	#ummenu li:hover{
 	background-color: #4C7CFF;
@@ -318,6 +319,6 @@ background-color: gray;
 #mmenu{
     position: fixed;
     margin-top: 75px;
-    z-index: 1;
-    width: 400px
+    z-index: 3;
+    width: 400px;
 }
