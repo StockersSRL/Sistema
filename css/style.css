@@ -311,7 +311,7 @@ li {
   width: 400px; }
 
 /*MENUES INTERNOS*/
-#listaInt1, #listaInt2 {
+#listaInt1, #listaInt2, #listaInt3 {
   position: fixed;
   width: 200px;
   color: white;
@@ -319,21 +319,65 @@ li {
   margin-top: -2px;
   margin-left: -10px; }
 
+#listaInt4, #listaInt5, #listaInt6 {
+  position: fixed;
+  width: 200px;
+  color: white;
+  overflow: hidden;
+  margin-top: -2px; }
+
 #listaInt2 {
   background-color: #68b4fa; }
 
 #listaInt1 {
   background-color: #5a64b7; }
 
-.li1, .li2 {
+#listaInt3 {
+  background-color: #c53139; }
+
+#listaInt4 {
+  background-color: green;
+  margin-left: -120px; }
+
+#listaInt5 {
+  background-color: #ef8b13;
+  margin-left: -97px; }
+
+#listaInt6 {
+  background-color: #52206e;
+  margin-left: -123px; }
+
+.li1, .li2, .li3 {
   color: white;
   width: 200px;
   text-align: left; }
+
+.li4, .li5, .li6 {
+  color: white;
+  width: 180px;
+  text-align: right; }
 
 .li1:hover {
   background-color: #9197C9; }
 
 .li2:hover {
   background-color: #B3D4F2; }
+
+.li3:hover {
+  background-color: #DB6066; }
+
+.li4:hover {
+  background-color: #2DA12D; }
+
+.li5:hover {
+  background-color: #FFB963; }
+
+.li6:hover {
+  background-color: #734C8A; }
+
+/*TEST MEDIA QUERY*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #content {
+    background-color: red; } }
 
 /*# sourceMappingURL=style.css.map */

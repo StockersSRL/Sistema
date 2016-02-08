@@ -16,6 +16,11 @@ $(document).ready(function(){
     
     function adaptar(){
                 $('#listaInt1').css("margin-top", "-2px");
+                $('#listaInt2').css("margin-top", "-2px");  
+                $('#listaInt3').css("margin-top", "-2px");
+                $('#listaInt4').css("margin-top", "-2px");
+                $('#listaInt5').css("margin-top", "-2px");
+                $('#listaInt6').css("margin-top", "-2px");
                 $('#subheader').css("margin-top", "90px");
                 $('#subheader').css("height", "35px");
                 $('.sizable').css("height", "30px");
@@ -57,6 +62,11 @@ $(document).ready(function(){
                 $('.borde').css("height", "50px");
                 $('#scrollup').fadeIn(500);
                 $('#listaInt1').css("margin-top", "8px");
+                $('#listaInt2').css("margin-top", "8px");
+                $('#listaInt3').css("margin-top", "8px");
+                $('#listaInt4').css("margin-top", "8px");
+                $('#listaInt5').css("margin-top", "8px");
+                $('#listaInt6').css("margin-top", "8px");
                 $('#logo2').fadeIn(500);
                 if(movido){
                     $('#searchc').animate({"margin-right": '-='+input_width}, "slow");
@@ -175,6 +185,10 @@ $(document).ready(function(){
     $('#searchheader').hide();
     $('#listaInt1').hide();
     $('#listaInt2').hide();
+    $('#listaInt3').hide();
+     $('#listaInt4').hide();
+      $('#listaInt5').hide();
+      $('#listaInt6').hide();
     
     var movido = false;
     
@@ -273,4 +287,12 @@ $(document).ready(function(){
     $( "#1" ).mouseout(function(){$('#listaInt1').hide();});
     $( "#2" ).mouseover(function(){$('#listaInt2').show();});
     $( "#2" ).mouseout(function(){$('#listaInt2').hide();});
+    $( "#3" ).mouseover(function(){$('#listaInt3').show();});
+    $( "#3" ).mouseout(function(){$('#listaInt3').hide();});
+    $( "#4" ).mouseover(function(){$('#listaInt4').show();});
+    $( "#4" ).mouseout(function(){$('#listaInt4').hide();});
+    $( "#5" ).mouseover(function(){$('#listaInt5').show();});
+    $( "#5" ).mouseout(function(){$('#listaInt5').hide();});
+    $( "#6" ).mouseover(function(){$('#listaInt6').show();});
+    $( "#6" ).mouseout(function(){$('#listaInt6').hide();});
 });
