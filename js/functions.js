@@ -174,6 +174,7 @@ $(document).ready(function(){
     $('#dmenu').hide();
     $('#searchheader').hide();
     $('#listaInt1').hide();
+    $('#listaInt2').hide();
     
     var movido = false;
     
@@ -268,10 +269,8 @@ $(document).ready(function(){
 			rayas = 1;
 		}
     });
-    $( "#1" ).mouseover(function() {
-        $('#listaInt1').show();
-    });
-    $( "#1" ).mouseout(function() {
-        $('#listaInt1').hide();
-    });
+    $( "#1" ).mouseover(function(){$('#listaInt1').show();});
+    $( "#1" ).mouseout(function(){$('#listaInt1').hide();});
+    $( "#2" ).mouseover(function(){$('#listaInt2').show();});
+    $( "#2" ).mouseout(function(){$('#listaInt2').hide();});
 });
