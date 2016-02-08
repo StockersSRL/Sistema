@@ -376,8 +376,21 @@ li {
   background-color: #734C8A; }
 
 /*TEST MEDIA QUERY*/
-@media screen and (min-width: 320px) and (max-width: 480px) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #content {
-    background-color: red; } }
+    background-color: green; } }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  /* Styles */ }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+  /* Styles */ }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */ }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }
 
 /*# sourceMappingURL=style.css.map */
