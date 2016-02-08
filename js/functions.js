@@ -15,12 +15,6 @@ $(document).ready(function(){
     }
     
     function adaptar(){
-                $('#listaInt1').css("margin-top", "-2px");
-                $('#listaInt2').css("margin-top", "-2px");  
-                $('#listaInt3').css("margin-top", "-2px");
-                $('#listaInt4').css("margin-top", "-2px");
-                $('#listaInt5').css("margin-top", "-2px");
-                $('#listaInt6').css("margin-top", "-2px");
                 $('#subheader').css("margin-top", "90px");
                 $('#subheader').css("height", "35px");
                 $('.sizable').css("height", "30px");
@@ -67,7 +61,7 @@ $(document).ready(function(){
                 $('#listaInt4').css("margin-top", "8px");
                 $('#listaInt5').css("margin-top", "8px");
                 $('#listaInt6').css("margin-top", "8px");
-                $('#logo2').fadeIn(500);
+                if(total_width>800) $('#logo2').fadeIn(500);
                 if(movido){
                     $('#searchc').animate({"margin-right": '-='+input_width}, "slow");
                     $('#usermenu').animate({"margin-right": '-='+input_width}, "slow"); 
@@ -98,21 +92,32 @@ $(document).ready(function(){
                 $('#usermenu').css("margin-top", "65px");
             }else{
                 adaptar();
+                $('#listaInt1').css("margin-top", "-2px");
+                $('#listaInt2').css("margin-top", "-2px");  
+                $('#listaInt3').css("margin-top", "-2px");
+                $('#listaInt4').css("margin-top", "-2px");
+                $('#listaInt5').css("margin-top", "-2px");
+                $('#listaInt6').css("margin-top", "-2px");
             }
     }
     
     function mobile(){
         total_width = $(window).width();
-        if(total_width<1034){
+        if(total_width<920){
+            
             if(scroll>20){
                 adaptar();
             }
+            /*START MOBILE*/
+         //   $('#1').css("height", "60px");
+          //  $('#menu').css("width")
+            /*END MOBILE*/
+            $('#subheader').hide();
             $('#lupa').hide();
             $('#rayas').hide();
             $('#co').hide();
             $('#nombre').hide();
             $('#date').hide();
-            $('#subheader').hide();
             $('#dmenu').show();
             $('#header').css("position", "fixed");
             $('#usr').css("margin-top", "0px");
@@ -129,8 +134,15 @@ $(document).ready(function(){
                     movido=false;
             }
 
-            $('#searchheader').css("margin-top", "90px"); 
+            $('#searchheader').css("margin-top", "90px");
+                $('#listaInt1').css("margin-top", "-37px");
+                $('#listaInt2').css("margin-top", "-37px");  
+                $('#listaInt3').css("margin-top", "-37px");
+                $('#listaInt4').css("margin-top", "-37px");
+                $('#listaInt5').css("margin-top", "-37px");
+                $('#listaInt6').css("margin-top", "-37px");
         }else{
+            $('#subheader').show();
             if($('#mmenu').is(':visible')){
                 $('#mmenu').hide();
             }
@@ -141,7 +153,6 @@ $(document).ready(function(){
             $('#rayas').show();
             $('#nombre').show();
             $('#date').show();
-            $('#subheader').show();
             $('#dmenu').hide();
             $('#header').css("position", "absolute");
             $('#header').css("height", "90px");
@@ -270,10 +281,10 @@ $(document).ready(function(){
     var rayas = 1;
 	$('#mmenu').hide();
 	$('#dmenu').click(function(){
-		if($("#mmenu").is(":hidden")){
-						$("#mmenu").fadeIn(1000);
+		if($("#subheader").is(":hidden")){
+						$("#subheader").fadeIn(1000);
 				  } else {
-					    $("#mmenu").hide();
+					    $("#subheader").hide();
 				  }
 	});
 	$('#dmenu').click(function () {
@@ -284,15 +295,20 @@ $(document).ready(function(){
 		}
     });
     $( "#1" ).mouseover(function(){$('#listaInt1').show();});
-    $( "#1" ).mouseout(function(){$('#listaInt1').hide();});
+    $( "#1" ).mouseout(function(){$('#listaInt1').hide();  if(scroll<20){$( "#1" ).css("height", "30px");}});
     $( "#2" ).mouseover(function(){$('#listaInt2').show();});
-    $( "#2" ).mouseout(function(){$('#listaInt2').hide();});
+    $( "#2" ).mouseout(function(){$('#listaInt2').hide();  if(scroll<20){$( "#2" ).css("height", "30px");}});
     $( "#3" ).mouseover(function(){$('#listaInt3').show();});
-    $( "#3" ).mouseout(function(){$('#listaInt3').hide();});
+    $( "#3" ).mouseout(function(){$('#listaInt3').hide();  if(scroll<20){$( "#3" ).css("height", "30px");}});
     $( "#4" ).mouseover(function(){$('#listaInt4').show();});
-    $( "#4" ).mouseout(function(){$('#listaInt4').hide();});
+    $( "#4" ).mouseout(function(){$('#listaInt4').hide();  if(scroll<20){$( "#4" ).css("height", "30px");}});
     $( "#5" ).mouseover(function(){$('#listaInt5').show();});
-    $( "#5" ).mouseout(function(){$('#listaInt5').hide();});
+    $( "#5" ).mouseout(function(){$('#listaInt5').hide();  if(scroll<20){$( "#5" ).css("height", "30px");}});
     $( "#6" ).mouseover(function(){$('#listaInt6').show();});
-    $( "#6" ).mouseout(function(){$('#listaInt6').hide();});
+    $( "#6" ).mouseout(function(){$('#listaInt6').hide();  if(scroll<20){$( "#6" ).css("height", "30px");}});
+    $('#content').click(function () {
+        if($('#usermenu').is(":visible")){
+            $('#usermenu').hide();
+        }
+    });
 });
