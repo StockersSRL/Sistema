@@ -103,7 +103,7 @@ $(document).ready(function(){
     
     function mobile(){
         total_width = $(window).width();
-        if(total_width<920){
+        if(total_width<800){
             
             if(scroll>20){
                 adaptar();
@@ -200,6 +200,7 @@ $(document).ready(function(){
      $('#listaInt4').hide();
       $('#listaInt5').hide();
       $('#listaInt6').hide();
+    $('#plus').hide();
     
     var movido = false;
     

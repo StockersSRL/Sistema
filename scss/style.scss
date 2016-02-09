@@ -112,7 +112,7 @@ margin-top: 25px;
 }
 /*SUBHEADER*/
 #subheader{
-  z-index: 1;
+  z-index: 2;
   margin-top:90px;
   @include dimensions(100%, 35px);
   @include border(thin solid $gray, thin solid $gray);
@@ -286,7 +286,9 @@ background-color: gray;
 #co:hover{
     content: url(../images/configA.svg);
 }
-
+#plus:hover{
+    content: url(../images/plusA.svg);
+}
 /*MENUES INTERNOS*/
 #listaInt1, #listaInt2, #listaInt3{
     position: fixed;  
@@ -355,7 +357,7 @@ background-color: gray;
 
 /*TEST MEDIA QUERY*/
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width : 920px){
+@media only screen and (max-width : 800px){
     #limage{
         width: 50%;
     }
@@ -371,6 +373,7 @@ background-color: gray;
         text-align: left;
         width: 120px;
         position: fixed;
+        z-index: 2;
     }
     .borde{
         display: none;
