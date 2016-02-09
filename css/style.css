@@ -262,6 +262,22 @@ li {
   background-color: #C0C0C0;
   border-bottom: 3px solid #C0C0C0; }
 
+#plus:hover {
+  content: url(../images/plusA.svg); }
+
+#menuplustri {
+  display: none;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent darkgray transparent;
+  opacity: 0.95;
+  margin-top: -10px;
+  cursor: default;
+  margin-right: 30px;
+  float: right; }
+
 #usr:hover {
   content: url(../images/usrA.svg); }
 
@@ -342,9 +358,23 @@ li {
 .li6:hover {
   background-color: #734C8A; }
 
+#menuplus {
+  display: none; }
+
 /*TEST MEDIA QUERY*/
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 944px) {
+  #menuplustri {
+    display: block; }
+
+  #menuplus {
+    display: block;
+    width: 160px;
+    height: 60px;
+    background-color: darkgray;
+    float: right;
+    margin-right: 30px; }
+
   #limage {
     width: 50%; }
 
