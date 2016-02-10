@@ -17,6 +17,13 @@ a:link {
 rect {
   z-index: 0; }
 
+#fs {
+  margin: 0px;
+  background: none;
+  border: none;
+  border-radius: none;
+  font-size: 12pt; }
+
 body {
   font-family: 'Harabara', sans-serif;
   font-size: 12pt; }
