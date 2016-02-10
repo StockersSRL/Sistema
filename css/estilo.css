@@ -24,3 +24,10 @@ form td {
 .panel-descripcion {
   height: 20%
 }
+
+
+
+#cat-tit {
+    position: relative;
+    bottom: 5px;
+}
