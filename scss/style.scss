@@ -152,7 +152,7 @@ li img{
 }
 #menu a li, #menu li, #configm li{
     @include padding(none, none, 10px, 10px);
-	line-height: 200%;
+	line-height: 190%;
 	float: left;
 	}
 .borde{
@@ -258,6 +258,7 @@ cursor: default;
 	border-bottom: 3px solid $gray;
 		}
 .cm2{
+    
 background-color: gray;
 	text-align: left;
 	font-style: normal;
@@ -310,7 +311,7 @@ margin-right: 30px; float: right;
     width: 200px;
     color: white;
     overflow: hidden;
-    margin-top: -2px;
+    margin-top: 0px;
     margin-left: -10px;
 }
 #listaInt4, #listaInt5, #listaInt6{
@@ -318,7 +319,7 @@ margin-right: 30px; float: right;
     width: 200px;
     color: white;
     overflow: hidden;
-    margin-top: -2px;
+    margin-top: 0px;
 }
 #listaInt2{
     background-color: rgb(104, 180, 250);    
@@ -389,6 +390,7 @@ margin-right: 30px; float: right;
     }
     #limage{
         width: 50%;
+        margin-left: 20px;
     }
     #content{
         background-color: white;
@@ -412,7 +414,7 @@ margin-right: 30px; float: right;
         height: 30px;
     }
     #listaInt1, #listaInt2, #listaInt3, #listaInt4, #listaInt5, #listaInt6{
-        margin-top: -36px;
+        margin-top: -35px;
         margin-left: 110px;
     }
     .li4, .li5, .li6{
@@ -428,7 +430,41 @@ margin-right: 30px; float: right;
         width: 100px;
     }
 }
+#nav-toggle { position: fixed; float: left; margin-top: 35px; margin-left: 20px;}
 
+#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px; 
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
 }

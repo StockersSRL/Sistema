@@ -108,12 +108,12 @@ $(document).ready(function(){
                 $('#usermenu').css("margin-top", "65px");
             }else{
                 adaptar();
-                $('#listaInt1').css("margin-top", "-2px");
-                $('#listaInt2').css("margin-top", "-2px");  
-                $('#listaInt3').css("margin-top", "-2px");
-                $('#listaInt4').css("margin-top", "-2px");
-                $('#listaInt5').css("margin-top", "-2px");
-                $('#listaInt6').css("margin-top", "-2px");
+                $('#listaInt1').css("margin-top", "0px");
+                $('#listaInt2').css("margin-top", "0px");  
+                $('#listaInt3').css("margin-top", "0px");
+                $('#listaInt4').css("margin-top", "0px");
+                $('#listaInt5').css("margin-top", "0px");
+                $('#listaInt6').css("margin-top", "0px");
             }
     }
     
@@ -132,7 +132,7 @@ $(document).ready(function(){
             $('#rayas').hide();
             $('#nombre').hide();
             $('#date').hide();
-            $('#dmenu').show();
+            $('#nav-toggle').show();
             $('#plus').show();
             $('#lupa').css("margin-right", "-155px");
             $('#lupa').css("margin-top", "7px");
@@ -147,7 +147,7 @@ $(document).ready(function(){
             $('#header').css("height", "90px");
             $('#logo').css("height", "30px");
             $('#content').css("margin-top", "80px");
-            $('#limage').css("margin-left", "-50px");
+            $('#limage').css("margin-left", "-10px");
             $('#usermenu').css("margin-right", "138px");
             $('#usermenu').css("margin-top", "140px");
             $('#tri2').css("margin-right", "-60px");
@@ -158,12 +158,12 @@ $(document).ready(function(){
             }
 
             $('#searchheader').css("margin-top", "90px");
-                $('#listaInt1').css("margin-top", "-37px");
-                $('#listaInt2').css("margin-top", "-37px");  
-                $('#listaInt3').css("margin-top", "-37px");
-                $('#listaInt4').css("margin-top", "-37px");
-                $('#listaInt5').css("margin-top", "-37px");
-                $('#listaInt6').css("margin-top", "-37px");
+                $('#listaInt1').css("margin-top", "-35px");
+                $('#listaInt2').css("margin-top", "-35px");  
+                $('#listaInt3').css("margin-top", "-35px");
+                $('#listaInt4').css("margin-top", "-35px");
+                $('#listaInt5').css("margin-top", "-35px");
+                $('#listaInt6').css("margin-top", "-35px");
             hidePlus();
         }else{
             $('#subheader').show();
@@ -179,7 +179,7 @@ $(document).ready(function(){
             $('#rayas').show();
             $('#nombre').show();
             $('#date').show();
-            $('#dmenu').hide();
+            $('#nav-toggle').hide();
             $('#header').css("position", "absolute");
             $('#header').css("height", "90px");
             $('#logo').css("height", "40px");
@@ -221,7 +221,7 @@ $(document).ready(function(){
     $('#scrollup').hide();
     $('#logo2').hide();
     $('#usermenu').hide();
-    $('#dmenu').hide();
+    $('#nav-toggle').hide();
     $('#searchheader').hide();
     $('#listaInt1').hide();
     $('#listaInt2').hide();
@@ -322,7 +322,7 @@ $(document).ready(function(){
     });
     var rayas = 1;
 	$('#mmenu').hide();
-	$('#dmenu').click(function(){
+	$('#nav-toggle').click(function(){
         $('#usermenu').hide();
         hidePlus();
 		if($("#subheader").is(":hidden")){
@@ -331,7 +331,7 @@ $(document).ready(function(){
 					    $("#subheader").hide();
 				  }
 	});
-	$('#dmenu').click(function () {
+	$('#nav-toggle').click(function () {
         if(rayas == 1){
 			rayas = 0;
 		}else{
@@ -359,4 +359,5 @@ $(document).ready(function(){
         }
         if($("#subheader").is(":visible") && total_width<944) $('#subheader').hide();
     });
+    document.querySelector( "#nav-toggle" )  .addEventListener( "click", function() {    this.classList.toggle( "active" );  });
 });
