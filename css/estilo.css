@@ -31,3 +31,32 @@ form td {
     position: relative;
     bottom: 5px;
 }
+
+#search-box {
+    width: 50%;
+    border-radius: 5px;
+}
+
+#cat-sea {
+    width: 70%;
+}
+
+#search-box input[type=text]{
+    margin: 3px;
+}
+
+#cat-sugg {
+    width: 28.3%;
+    background-color: white;
+    position: absolute;
+}
+
+.dropdown-suggest{
+    width: 100%;
+    display: block;
+}
+
+.dropdown-suggest:hover{
+    background-color: #dedede;
+    cursor: pointer;
+}
