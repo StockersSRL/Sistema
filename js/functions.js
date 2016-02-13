@@ -166,6 +166,7 @@ $(document).ready(function(){
                 $('#listaInt6').css("margin-top", "-35px");
             hidePlus();
         }else{
+            $('#menuplustri').hide();
             $('#subheader').show();
             if($('#mmenu').is(':visible')){
                 $('#mmenu').hide();
@@ -350,11 +351,11 @@ $(document).ready(function(){
     $( "#5" ).mouseout(function(){$('#listaInt5').hide();  if(scroll<20){$( "#5" ).css("height", "30px");}});
     $( "#6" ).mouseover(function(){$('#listaInt6').show();});
     $( "#6" ).mouseout(function(){$('#listaInt6').hide();  if(scroll<20){$( "#6" ).css("height", "30px");}});
-    $('#content').click(function () {
+    $('#wrapper').click(function () {
         if($('#usermenu').is(":visible")){
             $('#usermenu').hide();
         }
-        if($('#menuplus').is(":visible")){
+        if($('#menuplus').is(":visible") && total_width<944){
             hidePlus();
         }
         if($("#subheader").is(":visible") && total_width<944) $('#subheader').hide();
