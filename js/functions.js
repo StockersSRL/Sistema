@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     function bug(){
         var scroll = $(window).scrollTop();
-            if(scroll < 20){ 
+            if(scroll < 30){ 
                 $('#logo2').hide();
                 $('#b2').hide();
                 $('#scrollup').hide();
@@ -63,7 +63,8 @@ $(document).ready(function(){
     
     function scroller(){
     scroll = $(window).scrollTop();
-            if (scroll >= 20){
+            if (scroll >= 30){
+                $('#header').css("position", "absolute");
                 $('#subheader').css("position", "fixed");
                 $('#subheader').css("margin-top", "0px");
                 $('#subheader').css("height", "50px");
@@ -107,6 +108,7 @@ $(document).ready(function(){
                  $('#usermenu').css("margin-right", "66px");
                 $('#usermenu').css("margin-top", "65px");
             }else{
+                $('#header').css("position", "fixed");
                 adaptar();
                 $('#listaInt1').css("margin-top", "0px");
                 $('#listaInt2').css("margin-top", "0px");  
@@ -121,7 +123,7 @@ $(document).ready(function(){
         total_width = $(window).width();
         if(total_width<944){
             
-            if(scroll>20){
+            if(scroll>30){
                 adaptar();
             }
             /*START MOBILE*/
@@ -187,7 +189,7 @@ $(document).ready(function(){
             $('#content').css("margin-top", "130px");
             $('#tri2').css("margin-right", "0px");
             $('#limage').css("margin-left", "0px");
-            if(scroll>20){
+            if(scroll>30){
                 $('#usr').css("margin-top","10px");
                 $('#usr').css("right","60px");
                 $('#usr').css("margin-top","-20px");
@@ -205,7 +207,7 @@ $(document).ready(function(){
         if($('#searchheader').is(":hidden")){
             $('#searchheader').show();
             $('#content').css("margin-top", "160px");
-            if(scroll>20){
+            if(scroll>30){
                 $('#searchheader').css("margin-top", "50px");
             }else{
                 $('#searchheader').css("margin-top", "125px");
@@ -249,7 +251,7 @@ $(document).ready(function(){
     $(window).scroll(function () {
         var total_width = $(window).width();
         var scroll = $(window).scrollTop();
-        if (scroll >= 20)   $("#scrollup").show();
+        if (scroll >= 30)   $("#scrollup").show();
         if(total_width>944){
            scroller();
         }
@@ -340,17 +342,17 @@ $(document).ready(function(){
 		}
     });
     $( "#1" ).mouseover(function(){$('#listaInt1').show();});
-    $( "#1" ).mouseout(function(){$('#listaInt1').hide();  if(scroll<20){$( "#1" ).css("height", "30px");}});
+    $( "#1" ).mouseout(function(){$('#listaInt1').hide();  if(scroll<30){$( "#1" ).css("height", "30px");}});
     $( "#2" ).mouseover(function(){$('#listaInt2').show();});
-    $( "#2" ).mouseout(function(){$('#listaInt2').hide();  if(scroll<20){$( "#2" ).css("height", "30px");}});
+    $( "#2" ).mouseout(function(){$('#listaInt2').hide();  if(scroll<30){$( "#2" ).css("height", "30px");}});
     $( "#3" ).mouseover(function(){$('#listaInt3').show();});
-    $( "#3" ).mouseout(function(){$('#listaInt3').hide();  if(scroll<20){$( "#3" ).css("height", "30px");}});
+    $( "#3" ).mouseout(function(){$('#listaInt3').hide();  if(scroll<30){$( "#3" ).css("height", "30px");}});
     $( "#4" ).mouseover(function(){$('#listaInt4').show();});
-    $( "#4" ).mouseout(function(){$('#listaInt4').hide();  if(scroll<20){$( "#4" ).css("height", "30px");}});
+    $( "#4" ).mouseout(function(){$('#listaInt4').hide();  if(scroll<30){$( "#4" ).css("height", "30px");}});
     $( "#5" ).mouseover(function(){$('#listaInt5').show();});
-    $( "#5" ).mouseout(function(){$('#listaInt5').hide();  if(scroll<20){$( "#5" ).css("height", "30px");}});
+    $( "#5" ).mouseout(function(){$('#listaInt5').hide();  if(scroll<30){$( "#5" ).css("height", "30px");}});
     $( "#6" ).mouseover(function(){$('#listaInt6').show();});
-    $( "#6" ).mouseout(function(){$('#listaInt6').hide();  if(scroll<20){$( "#6" ).css("height", "30px");}});
+    $( "#6" ).mouseout(function(){$('#listaInt6').hide();  if(scroll<30){$( "#6" ).css("height", "30px");}});
     $('#wrapper').click(function () {
         if($('#usermenu').is(":visible")){
             $('#usermenu').hide();
