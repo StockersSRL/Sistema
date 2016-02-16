@@ -44,6 +44,8 @@ function suggestNames(){
             div.style.display = 'none';
         }
     }
+     
+
 }
 
 function hide(){
@@ -58,6 +60,38 @@ function getNombre(str){
     var div = document.getElementById('suggestName');
     div.innerHTML = '';
     div.style.display = 'none';  
+
 }
 
-    
+$( document ).ready(function() {
+        
+    var li = $('.suggestion');
+    var liSelected;
+    $(window).keydown(function(e) {
+      if (e.which === 40) {
+        if (liSelected) {
+          liSelected.removeClass('selected');
+          next = liSelected.next();
+          if (next.length > 0) {
+            liSelected = next.addClass('selected');
+          } else {
+            liSelected = li.eq(0).addClass('selected');
+          }
+        } else {
+          liSelected = li.eq(0).addClass('selected');
+        }
+      } else if (e.which === 38) {
+        if (liSelected) {
+          liSelected.removeClass('selected');
+          next = liSelected.prev();
+          if (next.length > 0) {
+            liSelected = next.addClass('selected');
+          } else {
+            liSelected = li.last().addClass('selected');
+          }
+        } else {
+          liSelected = li.last().addClass('selected');
+        }
+      }
+    });   
+});

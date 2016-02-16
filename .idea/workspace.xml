@@ -26,11 +26,11 @@
         <entry file="file://$PROJECT_DIR$/suggestNames.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.37560976">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="39" />
+              <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
               <folding>
-                <marker date="1455573087946" expanded="true" signature="239:274" placeholder="SELECT name ..user..." />
-                <marker date="1455573087946" expanded="true" signature="239:293" placeholder="SELECT name ..user..." />
-                <marker date="1455573087946" expanded="true" signature="239:295" placeholder="SELECT name ..user..." />
+                <marker date="1455591439941" expanded="true" signature="239:274" placeholder="SELECT name ..user..." />
+                <marker date="1455591439941" expanded="true" signature="239:293" placeholder="SELECT name ..user..." />
+                <marker date="1455591439941" expanded="true" signature="239:295" placeholder="SELECT name ..user..." />
               </folding>
             </state>
           </provider>
@@ -185,7 +185,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -252,11 +252,11 @@
     <entry file="file://$PROJECT_DIR$/suggestNames.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37560976">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="39" />
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
           <folding>
-            <marker date="1455573087946" expanded="true" signature="239:274" placeholder="SELECT name ..user..." />
-            <marker date="1455573087946" expanded="true" signature="239:293" placeholder="SELECT name ..user..." />
-            <marker date="1455573087946" expanded="true" signature="239:295" placeholder="SELECT name ..user..." />
+            <marker date="1455591439941" expanded="true" signature="239:274" placeholder="SELECT name ..user..." />
+            <marker date="1455591439941" expanded="true" signature="239:293" placeholder="SELECT name ..user..." />
+            <marker date="1455591439941" expanded="true" signature="239:295" placeholder="SELECT name ..user..." />
           </folding>
         </state>
       </provider>

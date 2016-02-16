@@ -12,7 +12,7 @@ $result = $mysqli->query($query);
 $i = 0;
 while($row = $result->fetch_assoc()) {
     $aName =$row["name"];
-    $retorno .= "<li onclick='getNombre(this.innerHTML);'>" . $aName .  "</li>";
+    $retorno .= "<li onclick='getNombre(this.innerHTML);' class='suggestion'>" . $aName .  "</li>";
     $i++;
     if($i>6){
         break;

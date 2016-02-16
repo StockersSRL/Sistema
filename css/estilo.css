@@ -29,7 +29,6 @@ form td {
     bottom: 5px;
 }
 
-<<<<<<< HEAD
 /*Sugerencia de busqueda*/
 
 #busquedaArt input[type=text]{
@@ -149,5 +148,7 @@ form td {
     margin-left: 70px;
     display: block;
 }
-=======
->>>>>>> 17ea5c8d5f5ad18c7ded7edd6cca77693ddb5294
+
+.selected{
+    background-color: aqua;
+}
