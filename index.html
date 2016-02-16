@@ -1,0 +1,181 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/jquery-1.12.0.min.js"></script>
+<!---<script src="https://code.jquery.com/jquery-1.10.2.js"></script>--->
+     <script src="js/functions.js"></script>
+     <script src="js/colors.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+    <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+    
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles-form.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
+    
+    <link rel="stylesheet" href="css/chosen.css">
+    <link rel="stylesheet" href="css/prism.css">
+    
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" media="all" />
+    
+    <style type="text/css" media="all">
+    .chosen-rtl .chosen-drop { left: -9000px; }
+    </style>
+    
+<title>[StockMGR]</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+<body>
+          
+	<div id="header">
+        <img id="dmenu" src="images/rayas.svg" />
+        <center>
+           <img id="limage" src="images/logo.svg" height="40px" style="margin-top: 15px; position:static; max-width: 425px;"/>
+            <p id="date" style="margin-top:7px;">Domingo 2 de Agosto, 2015 - 16:55</p>
+        </center>
+       <div id="searchc">            
+           <img id="lupa" class="slide" src="images/lupa.svg" width="35px"/>
+           <div class="borde2" id="bordee"></div>
+           <img id="usr" class="slide" src="images/usr.svg" width="35px" style="float:right; margin-right:10px;"/>
+       </div>
+         <div id="nombre" style="z-index: 8; margin-left: 45px; margin-top: -15px;">Marcos, SysAdmin</div>
+       
+         <img id="rayas" src="images/noti.svg" height="60px" style="float:left; margin-left: 30px; margin-top: -25px; z-index:3;"/>
+    </div>
+    <div id="empresa">Talmet</div>
+    <div id="subheader" class="noselect">
+        <img id="logo2" src="images/logo.svg" height="25px" style="margin-top: 12.5px; float: left; margin-left: 10px;"/>
+            <ul id="menu">
+                <strong>
+                <a><li id="1" class="sizable" style="border-top: thick solid #5F64B7;">Principal</li></a>
+                <div class="borde"></div>
+                <a><li id="2" class="sizable" style="border-top: thick solid #68B4FA;">Clientes</li></a>
+                <div class="borde"></div>
+                <a><li id="3" class="sizable" style="border-top: thick solid #C53139;">Usuarios</li></a>
+                <div class="borde"></div>
+                <a><li id="4" class="sizable" style="border-top: thick solid green;">Artículos</li></a>
+                <div class="borde"></div>
+                <a><li id="5" class="sizable" style="border-top: thick solid #EF8B13;">Estadísticas</li></a>
+                <div class="borde"></div>
+                <a><li id="6" class="sizable" style="border-top: thick solid #52206E;">Facturas</li></a>
+                </strong>
+            </ul>
+    </div>
+    <div id="searchheader" class="noselect">
+        <form>
+        <label class="bu" for="buscar"><strong>Buscar en el sistema: </strong></label><input class="bu" type="text" name="buscar"/><input type="submit" value="Ir" style="padding-left: 3px; padding-right:3px; margin-right: 5px;">
+        </form>
+    </div>
+    <ul id="usermenu" style="z-index: 87;">
+               <div id="tri2" ></div>
+               <li class="cm2"><center>Not 1</center></li>
+               <li class="cm2"><center>Not 2</center></li>
+               <li class="cm2"><center>  Cerrar Sesión  </center></li>
+    </ul>
+    
+
+        <div id="wrapper">
+  
+          <h1>Alta de artículo</h1>
+
+          <form method="post" action="#">
+          <div class="col-2">
+            <label>
+              Nombre
+              <input placeholder="Nombre del artículo" id="name" name="name" tabindex="1">
+            </label>
+          </div>
+          <div class="col-2">
+            <label>
+              Código
+              <input placeholder="Código del artículo" id="codigo" name="codigo" tabindex="2">
+            </label>
+          </div>
+
+          <div class="col-3">
+            <label>
+              Palabras clave
+              <input placeholder="Ayuda a encontrar los artículos más facilmente" id="tags" name="tags" tabindex="3">
+            </label>
+          </div>
+          <div class="col-3" id="celda-mala-1">
+            <label style="height:60px;">
+              Foto
+              <input type="file" id="foto" value="Subir Foto" name="foto" tabindex="4">
+            </label>
+          </div>
+              <div class="col-3">
+            <label>
+              Precio
+              <input type="number" placeholder="$" id="precio" name="precio" tabindex="6">
+            </label>
+          </div>
+              
+          <div class="col-2" style="float:left">
+            <label>
+              <span id="cat-tit">Categorias</span><br>
+               <select data-placeholder="Selecciona varias..." class="chosen-select" multiple style="width:85%;" tabindex="4">
+            <option value=""></option>
+            <option value="Canillas">Canillas</option>
+            <option value="Cromados">Cromados</option>
+            <option value="Ceramica">Ceramica</option>
+            <option value="ALgo">ALgo</option>
+            <option value="Algo mas">Algo mas</option>
+            <option value=" Y yo que se..."> Y yo que se...</option><option value="Canillas">Canillas</option>
+            <option value="Cromados">Cromados</option>
+            <option value="Ceramica">Ceramica</option>
+            <option value="ALgo">ALgo</option>
+            <option value="Algo mas">Algo mas</option>
+            <option value=" Y yo que se..."> Y yo que se...</option><option value="Canillas">Canillas</option>
+            <option value="Cromados">Cromados</option>
+            <option value="Ceramica">Ceramica</option>
+            <option value="ALgo">ALgo</option>
+            <option value="Algo mas">Algo mas</option>
+            <option value=" Y yo que se..."> Y yo que se...</option>
+          </select><br>
+            </label>
+          </div>
+
+          
+          <div class="col-2">
+            <label>
+              <span id="textoDescripcion">Descripción</span><br><br>
+              <textarea id="descripcion" name="descripcion" ></textarea>
+            </label>
+          </div>
+
+          <div class="col-submit">
+            <button class="submitbtn">Dar de Alta</button>
+          </div>
+
+          </form>
+          </div>
+    
+    
+    <script src="js/chosen.jquery.js" type="text/javascript"></script>
+  <script src="js/prism.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+  </script>
+
+
+<script type="text/javascript">
+var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+
+elems.forEach(function(html) {
+  var switchery = new Switchery(html);
+});
+</script>
+    <div id="scrollup" style="z-index:8; position:fixed; bottom:0%; float:right;"><img src="images/up.svg" width="30px"/></div>
+</body>
+</html>
