@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-.form input:focus {
+.form input:focus, .form textarea:focus {
     border-color: #43A047;
 }
 .login-page {
