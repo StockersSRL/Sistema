@@ -15,22 +15,22 @@ function original(uno, dos, tres){
 function cambio(destino){
 	switch(destino){
 	case 0:
-		$("#in").html("<font size=7>cuatro</font>");
+		$("#in").html("<font size=7>4</font>");
 		$("#i4").attr( "src", "images/slide2.svg" );
 		original("#i1", "#i2", "#i3");
 		break;
 	case 1:
-		$("#in").html("<font size=7>uno</font>");
+		$("#in").html("<font size=7>1</font>");
 		$("#i1").attr( "src", "images/slide2.svg" );
 		original("#i4", "#i2", "#i3");
 		break;
 	case 2:
-		$("#in").html("<font size=7>dos</font>");
+		$("#in").html("<font size=7>2</font>");
 		$("#i2").attr( "src", "images/slide2.svg" );
 		original("#i4", "#i1", "#i3");
 		break;
 	case 3:
-		$("#in").html("<font size=7>tres</font>");
+		$("#in").html("<font size=7>3</font>");
 		$("#i3").attr( "src", "images/slide2.svg" );
 		
 		original("#i1", "#i2", "#i4");
@@ -66,18 +66,22 @@ function changeBackgroundTo(destination){
 }
 
 $(document).ready(function(){
+    $('#prop').hide();
     var height = $( window ).height();
     $('#img').css("height", height);
     setTimeout(changeBackground, 0);  
     $(".bsl").click(function(){
-		clearTimeout(timer);
 		var id = $(this).attr('id');
-		var destination = parseInt(id.charAt(1)); 
-		if(destination != currentBackground+1){
-			changeBackgroundTo(destination);
-		}else{
-			changeBackground();
-		}
+		var destination = parseInt(id.charAt(1));
+        if(destination != currentBackground){
+		  if(destination != currentBackground+1){
+             clearTimeout(timer);
+			 changeBackgroundTo(destination);
+		  }else{
+             clearTimeout(timer);
+			 changeBackground();
+		  }
+        }
 	});
     $('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
