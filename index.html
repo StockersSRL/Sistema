@@ -2,18 +2,14 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width">
-<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-1.12.0.min.js"></script>
 <!---<script src="https://code.jquery.com/jquery-1.10.2.js"></script>--->
      <script src="js/functions.js"></script>
      <script src="js/colors.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+    <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
     
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    
-<title>[StockMGR]</title>
-<link rel="icon" 
-      type="image/png" 
-      href="images/fav.png" />
     <link rel="stylesheet" type="text/css" media="all" href="css/styles-form.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
     
@@ -27,85 +23,47 @@
     .chosen-rtl .chosen-drop { left: -9000px; }
     </style>
     
+<title>[StockMGR]</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
-<body class="noselect">
+<body>
           
 	<div id="header">
-        <a id="nav-toggle" href="#"><span></span></a>
+        <img id="dmenu" src="images/rayas.svg" />
         <center>
-           <img id="limage" src="images/sto.svg" height="65px" style="margin-top: 15px; position:static; max-width: 425px;"/>
+           <img id="limage" src="images/logo.svg" height="40px" style="margin-top: 15px; position:static; max-width: 425px;"/>
+            <p id="date" style="margin-top:7px;">Domingo 2 de Agosto, 2015 - 16:55</p>
         </center>
-       
-                <img id="plus" src="images/plus.svg" width="40px" height="40px" style="float:right"/>
-       <div id="searchc">   
-           <div id="menuplustri"></div>
-            <div id="menuplus"></div>
-           <img id="lupa" class="slide" src="images/lupa.svg" height="45px" width="45px" style="z-index:5;"/>
-           <img id="usr" class="slide" src="images/usr.svg" height="45px" width="45px" style="float:right; margin-right:10px; z-index:5;"/>
-           <img id="co" class="slide" src="images/config.svg" height="45px" width="45px" style="float:right; margin-right:10px;z-index:5;"/>
+       <div id="searchc">            
+           <img id="lupa" class="slide" src="images/lupa.svg" width="35px"/>
+           <div class="borde2" id="bordee"></div>
+           <img id="usr" class="slide" src="images/usr.svg" width="35px" style="float:right; margin-right:10px;"/>
        </div>
-       <div id="nombre" style="z-index: 8; margin-left: 35px; position: relative; top:-25px; width:200px;">
-             <table id="client" cellspacing="10px" cellpadding="5px">
-                  <tr>
-                      <td style="border-left: solid 3px #545557; padding: 5px; border-bottom: solid 3px #545557"><strong> Marcos, Sysadmin </strong></td>
-                  </tr>
-                  <tr>
-                      <td style="border-left: solid 3px #545557; padding: 5px;border-top: solid 3px #545557"><strong>Talmet</strong></td>
-                  </tr>
-                </table>
-        </div>
+         <div id="nombre" style="z-index: 8; margin-left: 45px; margin-top: -15px;">Marcos, SysAdmin</div>
        
+         <img id="rayas" src="images/noti.svg" height="60px" style="float:left; margin-left: 30px; margin-top: -25px; z-index:3;"/>
     </div>
-
+    <div id="empresa">Talmet</div>
     <div id="subheader" class="noselect">
-        <img id="logo2" src="images/line.svg" height="25px" style="margin-top: 12.5px; float: left; margin-left: 10px;"/>
+        <img id="logo2" src="images/logo.svg" height="25px" style="margin-top: 12.5px; float: left; margin-left: 10px;"/>
             <ul id="menu">
                 <strong>
-                <a><li id="1" class="sizable" style="border-top: thick solid #5F64B7;">Principal
-                            <ul id="listaInt1">
-                                <li class="li1">Elemento 1</li>
-                                <li class="li1">Elemento 2</li>
-                            </ul>
-                    </li></a>
+                <a><li id="1" class="sizable" style="border-top: thick solid #5F64B7;">Principal</li></a>
                 <div class="borde"></div>
-                <a><li id="2" class="sizable" style="border-top: thick solid #68B4FA; ">Clientes
-                            <ul id="listaInt2">
-                                <li class="li2">Elemento1</li>
-                                <li class="li2">Elemento2</li>
-                            </ul>
-                    </li></a>
+                <a><li id="2" class="sizable" style="border-top: thick solid #68B4FA;">Clientes</li></a>
                 <div class="borde"></div>
-                <a><li id="3" class="sizable" style="border-top: thick solid #C53139;">Usuarios
-                            <ul id="listaInt3">
-                                <li class="li3">Elemento1</li>
-                                <li class="li3">Elemento2</li>
-                            </ul>
-                    </li></a>
+                <a><li id="3" class="sizable" style="border-top: thick solid #C53139;">Usuarios</li></a>
                 <div class="borde"></div>
-                <a><li id="4" class="sizable" style="border-top: thick solid green;">Artículos
-                            <ul id="listaInt4">
-                                <li class="li4">Elemento1</li>
-                                <li class="li4">Elemento2</li>
-                            </ul>
-                    </li></a>
+                <a><li id="4" class="sizable" style="border-top: thick solid green;">Artículos</li></a>
                 <div class="borde"></div>
-                <a><li id="5" class="sizable" style="border-top: thick solid #EF8B13;">Estadísticas
-                            <ul id="listaInt5">
-                                <li class="li5">Elemento1</li>
-                                <li class="li5">Elemento2</li>
-                            </ul>
-                    </li></a>
+                <a><li id="5" class="sizable" style="border-top: thick solid #EF8B13;">Estadísticas</li></a>
                 <div class="borde"></div>
-                <a><li id="6" class="sizable" style="border-top: thick solid #52206E;">Facturas
-                            <ul id="listaInt6">
-                                <li class="li6">Elemento1</li>
-                                <li class="li6">Elemento2</li>
-                            </ul>
-                    </li></a>
+                <a><li id="6" class="sizable" style="border-top: thick solid #52206E;">Facturas</li></a>
                 </strong>
             </ul>
     </div>
-    <div id="searchheader" class="noselect">         <form id="fs">
+    <div id="searchheader" class="noselect">
+        <form>
         <label class="bu" for="buscar"><strong>Buscar en el sistema: </strong></label><input class="bu" type="text" name="buscar"/><input type="submit" value="Ir" style="padding-left: 3px; padding-right:3px; margin-right: 5px;">
         </form>
     </div>
@@ -115,15 +73,13 @@
                <li class="cm2"><center>Not 2</center></li>
                <li class="cm2"><center>  Cerrar Sesión  </center></li>
     </ul>
-   
-
-    <div id="target"></div>
     
+
         <div id="wrapper">
   
           <h1>Alta de artículo</h1>
 
-          <form id="formito" method="post" action="#">
+          <form method="post" action="#">
           <div class="col-2">
             <label>
               Nombre
@@ -156,7 +112,7 @@
             </label>
           </div>
               
-          <div class="col-2" style="float:left" id="col-cat">
+          <div class="col-2" style="float:left">
             <label>
               <span id="cat-tit">Categorias</span><br>
                <select data-placeholder="Selecciona varias..." class="chosen-select" multiple style="width:85%;" tabindex="4">
@@ -182,7 +138,7 @@
           </div>
 
           
-          <div class="col-2" id="col-desc">
+          <div class="col-2">
             <label>
               <span id="textoDescripcion">Descripción</span><br><br>
               <textarea id="descripcion" name="descripcion" ></textarea>
@@ -220,6 +176,6 @@ elems.forEach(function(html) {
   var switchery = new Switchery(html);
 });
 </script>
-    <div id="scrollup" style="z-index:8; position:fixed; bottom:0%; float:right;"><img src="images/up.svg" width="50px" style="opacity:.92;"/></div>
+    <div id="scrollup" style="z-index:8; position:fixed; bottom:0%; float:right;"><img src="images/up.svg" width="30px"/></div>
 </body>
 </html>

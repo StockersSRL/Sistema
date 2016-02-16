@@ -4,9 +4,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width">
 <script src="js/jquery-1.11.1.min.js"></script>
-<!---<script src="https://code.jquery.com/jquery-1.10.2.js"></script>--->
-     <script src="js/functions.js"></script>
+     <script src="js/funciones.js"></script>
      <script src="js/colors.js"></script>
+    
+    
+    <script src="js/functions.js"></script>
+     <script src="js/colors.js"></script>
+     <script src="js/bootstrap.js"></script>
+<!--    <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">-->
+    <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css">
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" media="all" />
+    
     
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     
@@ -14,21 +24,8 @@
 <link rel="icon" 
       type="image/png" 
       href="images/fav.png" />
-    <link rel="stylesheet" type="text/css" media="all" href="css/styles-form.css">
-    <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
-    
-    <link rel="stylesheet" href="css/chosen.css">
-    <link rel="stylesheet" href="css/prism.css">
-    
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/estilo.css" rel="stylesheet" type="text/css" media="all" />
-    
-    <style type="text/css" media="all">
-    .chosen-rtl .chosen-drop { left: -9000px; }
-    </style>
-    
 </head>
-<body class="noselect">
+<body class="noselect" onclick="hide()">
           
 	<div id="header">
         <a id="nav-toggle" href="#"><span></span></a>
@@ -105,7 +102,8 @@
                 </strong>
             </ul>
     </div>
-    <div id="searchheader" class="noselect">         <form id="fs">
+    <div id="searchheader" class="noselect">
+        <form>
         <label class="bu" for="buscar"><strong>Buscar en el sistema: </strong></label><input class="bu" type="text" name="buscar"/><input type="submit" value="Ir" style="padding-left: 3px; padding-right:3px; margin-right: 5px;">
         </form>
     </div>
@@ -117,109 +115,124 @@
     </ul>
    
 
-    <div id="target"></div>
-    
-        <div id="wrapper">
-  
-          <h1>Alta de artículo</h1>
-
-          <form id="formito" method="post" action="#">
-          <div class="col-2">
-            <label>
-              Nombre
-              <input placeholder="Nombre del artículo" id="name" name="name" tabindex="1">
-            </label>
-          </div>
-          <div class="col-2">
-            <label>
-              Código
-              <input placeholder="Código del artículo" id="codigo" name="codigo" tabindex="2">
-            </label>
-          </div>
-
-          <div class="col-3">
-            <label>
-              Palabras clave
-              <input placeholder="Ayuda a encontrar los artículos más facilmente" id="tags" name="tags" tabindex="3">
-            </label>
-          </div>
-          <div class="col-3" id="celda-mala-1">
-            <label style="height:60px;">
-              Foto
-              <input type="file" id="foto" value="Subir Foto" name="foto" tabindex="4">
-            </label>
-          </div>
-              <div class="col-3">
-            <label>
-              Precio
-              <input type="number" placeholder="$" id="precio" name="precio" tabindex="6">
-            </label>
-          </div>
-              
-          <div class="col-2" style="float:left" id="col-cat">
-            <label>
-              <span id="cat-tit">Categorias</span><br>
-               <select data-placeholder="Selecciona varias..." class="chosen-select" multiple style="width:85%;" tabindex="4">
-            <option value=""></option>
-            <option value="Canillas">Canillas</option>
-            <option value="Cromados">Cromados</option>
-            <option value="Ceramica">Ceramica</option>
-            <option value="ALgo">ALgo</option>
-            <option value="Algo mas">Algo mas</option>
-            <option value=" Y yo que se..."> Y yo que se...</option><option value="Canillas">Canillas</option>
-            <option value="Cromados">Cromados</option>
-            <option value="Ceramica">Ceramica</option>
-            <option value="ALgo">ALgo</option>
-            <option value="Algo mas">Algo mas</option>
-            <option value=" Y yo que se..."> Y yo que se...</option><option value="Canillas">Canillas</option>
-            <option value="Cromados">Cromados</option>
-            <option value="Ceramica">Ceramica</option>
-            <option value="ALgo">ALgo</option>
-            <option value="Algo mas">Algo mas</option>
-            <option value=" Y yo que se..."> Y yo que se...</option>
-          </select><br>
-            </label>
-          </div>
-
+    <div id="target"></div>   
+    <div id="wrapper">   
+        
+        <form id="busquedaArt"method="get" action="#">
+            <div id="fomularios">
+                <h2>Buscar artículo:</h2><br>
+                <input type="text" name="s-nombre" id="s-nombre" placeholder="Nombre" onkeyup="suggestNames()" onclick="suggestNames()">
+                <div id="suggestName" style="display:none;">
+                </div>
+                <input type="text" name="s-codigo" id="s-codigo" placeholder="Código">
+                <input type="text" name="s-tags" id="s-tags" placeholder="Tags">
+            </div>
+            <button class="btn btn-primary">Buscar</button>
+        </form>
+        
+        
+        
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            
+            
+   <div class="panel panel-primary">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3>Canilla cromada</h3>#Codigo de articulo
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
           
-          <div class="col-2" id="col-desc">
-            <label>
-              <span id="textoDescripcion">Descripción</span><br><br>
-              <textarea id="descripcion" name="descripcion" ></textarea>
-            </label>
-          </div>
-
-          <div class="col-submit">
-            <button class="submitbtn">Dar de Alta</button>
-          </div>
-
-          </form>
-          </div>
+          <div class="row">
+                <div class="col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="images/canilla.png" alt="...">
+                    </a>
+                </div>
+                 <div class="col-md-10">
+                 <div class="row">
+                 <div class="col-md-3">
+                    <h3>Nombre:</h3> Canilla cromada<br>
+                    <h3>Proveedor:</h3> campo opcional<br>
+                </div>
+                <div class="col-md-2">
+                    <h3>Codigo:</h3> #23123<br>
+                    <h3>Precio:</h3> $1232<br>
+                </div>
+                 <div class="col-md-7" >
+                     Descripción:
+                     <div class="panel panel-default panel-descripcion">
+                         <div class="panel-body">
+                            Descripcion del articulo
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                </div>
+            </div>
+          
+      </div>
+    </div>
+  </div>
+            
+            
+            
+  <div class="panel panel-primary">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <h3>Vuater clos</h3>#Codigo de articulo
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        <div class="row">
+                <div class="col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="images/water.png" alt="...">
+                    </a>
+                </div>
+                 <div class="col-md-10">
+                 <div class="row">
+                 <div class="col-md-3">
+                    <h3>Nombre:</h3> Guater<br>
+                    <h3>Proveedor:</h3> campo opcional<br>
+                </div>
+                <div class="col-md-2">
+                    <h3>Codigo:</h3> #23123<br>
+                    <h3>Precio:</h3> $1232<br>
+                </div>
+                 <div class="col-md-7" >
+                     Descripción:
+                     <div class="panel panel-default panel-descripcion">
+                         <div class="panel-body">
+                            Descripcion del articulo
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        
+    </div>
     
-    
-    <script src="js/chosen.jquery.js" type="text/javascript"></script>
-  <script src="js/prism.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    var config = {
-      '.chosen-select'           : {},
-      '.chosen-select-deselect'  : {allow_single_deselect:true},
-      '.chosen-select-no-single' : {disable_search_threshold:10},
-      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-      '.chosen-select-width'     : {width:"95%"}
-    }
-    for (var selector in config) {
-      $(selector).chosen(config[selector]);
-    }
-  </script>
-
-
-<script type="text/javascript">
-var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
-
+<script>
 elems.forEach(function(html) {
   var switchery = new Switchery(html);
 });
 </script>
-    <div id="scrollup" style="z-index:8; position:fixed; bottom:0%; float:right;"><img src="images/up.svg" width="50px" style="opacity:.92;"/></div>
+    <div id="scrollup" style="z-index:8; position:fixed; bottom:0%; float:right;"><img src="images/up.svg" width="30px"/></div>
 </body>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    
 </html>

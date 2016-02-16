@@ -1,0 +1,143 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script style="color: rgb(0, 0, 0);" src="js/jquery-1.11.1.min.js"></script>
+<!---<script src="https://code.jquery.com/jquery-1.10.2.js"></script>--->
+     <script src="js/functions.js"></script>
+     <script src="js/colors.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/switchery.min.js"></script>
+    <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+    <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles-form.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
+    
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/estilo.css" rel="stylesheet" type="text/css" media="all">
+    
+<title>[StockMGR]</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body style="  background-image: url(images/bg%20hipster%20forest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;">
+          
+	<div style="position: absolute; height: 90px;" id="header">
+        <img style="display: none;" id="dmenu" src="images/rayas.svg">
+        <center>
+           <img id="limage" src="images/logo.svg" style="margin-top: 15px; position: static; max-width: 425px; margin-left: 0px;" height="40px">
+            <p id="date" style="margin-top: 7px;">Domingo 2 de Agosto, 2015 - 16:55</p>
+        </center>
+       <div id="searchc">            
+           <img id="lupa" class="slide" src="images/lupa.svg" width="35px">
+           <div class="borde2" id="bordee"></div>
+           <img id="usr" class="slide" src="images/usr.svg" style="float: right; margin-right: 10px; margin-top: 0px;" width="35px">
+       </div>
+         <div id="nombre" style="z-index: 8; margin-left: 45px; margin-top: -15px;">Marcos, SysAdmin</div>
+       
+         <img id="rayas" src="images/noti.svg" style="float: left; margin-left: 30px; margin-top: -25px; z-index: 3;" height="60px">
+    </div>
+    <div id="empresa">Talmet</div>
+    <div style="margin-top: 0px; height: 50px;" id="subheader" class="noselect">
+        <img id="logo2" src="images/logo.svg" style="margin-top: 12.5px; float: left; margin-left: 10px; display: block;" height="25px">
+            <ul id="menu">
+                <strong>
+                <a><li id="1" class="sizable" style="border-top: thick solid rgb(95, 100, 183); background-color: white; color: black; height: 40px; padding-top: 5px;">Principal</li></a>
+                <div style="height: 50px;" class="borde"></div>
+                <a><li id="2" class="sizable" style="border-top: thick solid rgb(104, 180, 250); background-color: white; color: black; height: 40px; padding-top: 5px;">Clientes</li></a>
+                <div style="height: 50px;" class="borde"></div>
+                <a><li id="3" class="sizable" style="border-top: thick solid rgb(197, 49, 57); background-color: white; color: black; height: 40px; padding-top: 5px;">Usuarios</li></a>
+                <div style="height: 50px;" class="borde"></div>
+                <a><li id="4" class="sizable" style="border-top: thick solid green; background-color: white; color: black; height: 40px; padding-top: 5px;">Artículos</li></a>
+                <div style="height: 50px;" class="borde"></div>
+                <a><li id="5" class="sizable" style="border-top: thick solid rgb(239, 139, 19); background-color: white; color: black; height: 40px; padding-top: 5px;">Estadísticas</li></a>
+                <div style="height: 50px;" class="borde"></div>
+                <a><li id="6" class="sizable" style="border-top: thick solid rgb(82, 32, 110); background-color: white; color: black; height: 40px; padding-top: 5px;">Facturas</li></a>
+                </strong>
+            </ul>
+    </div>
+    <div style="display: none;" id="searchheader" class="noselect">
+        <form>
+        <label class="bu" for="buscar"><strong>Buscar en el sistema: </strong></label><input class="bu" name="buscar" type="text"><input value="Ir" style="padding-left: 3px; padding-right:3px; margin-right: 5px;" type="submit">
+        </form>
+    </div>
+    <ul id="usermenu" style="z-index: 87; display: none; margin-left: 0px;">
+               <div style="margin-right: 0px;" id="tri2"></div>
+               <li class="cm2"><center>Not 1</center></li>
+               <li class="cm2"><center>Not 2</center></li>
+               <li class="cm2"><center>  Cerrar Sesión  </center></li>
+    </ul>
+    
+    <div id="wrapper">
+        <h1>Alta de Usuario</h1>
+  
+          <form onsubmit="return false">
+          <div class="col-3">
+            <label>
+              Nombre
+              <input placeholder="Nombre completo" id="name" name="name" tabindex="1">
+            </label>
+          </div>
+          <div class="col-3">
+            <label>
+              Teléfono
+              <input placeholder="Numero de teléfono o celular" id="phone" name="phone" tabindex="2">
+            </label>
+          </div>
+          <div class="col-3">
+            <label>
+              E-mail
+              <input placeholder="Dirección de correo electrónico" id="email" name="email" tabindex="3">
+            </label>
+          </div>
+          <div class="col-3">
+            <label>
+              Usuario
+                <input placeholder="Nombre de usuario" id="user" name="user" tabindex="4">
+            </label>
+          </div>
+
+          <div class="col-3">
+            <label>
+              Contraseña
+              <input type="password" placeholder="••••••••" id="pass" name="pass" tabindex="5">
+            </label>
+          </div>
+              <div class="col-3">
+            <label>
+              Reingresa tu contraseña
+              <input type="password" placeholder="••••••••" id="rePass" name="rePass" tabindex="5">
+            </label>
+          </div>
+          <div class="col-4">
+            <label >Sube una imágen para tu perfil</label>
+            <input style="margin:5px 0px 17px 10px;" type="file" name="image" id="image"><br>
+          </div>
+          <div class="col-4">
+            <label>Selecciona si eres administrador</label>
+            <center style="position:relative; margin-bottom:8px;"><input class="js-switch" type="checkbox"></center>
+          </div>
+          <div class="col-2 switch">
+            <label>Acepto los términos y condiciones</label>
+            <center style="position:relative;margin-bottom:8px;"><input class="js-switch" type="checkbox"></center>
+          </div>
+
+          <div class="col-submit">
+            <button class="submitbtn">Darme de alta</button>
+          </div>
+
+          </form>
+          </div>
+<script type="text/javascript">
+var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+
+elems.forEach(function(html) {
+  var switchery = new Switchery(html);
+});
+</script>
+    <div id="scrollup" style="z-index: 8; position: fixed; bottom: 0%; float: right; display: block;"><img src="images/up.svg" width="30px"></div>
+
+</body>
+
+</html>
