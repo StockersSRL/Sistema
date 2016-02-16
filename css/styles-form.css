@@ -3,7 +3,7 @@
 html { overflow-y: scroll; }
 body {
   font-family: Arial, Tahoma, sans-serif;
-  background: #cde0ea;
+    background-color: #00AFEE; /*025A7E mas oscuro*/
   font-size: 62.5%;
   line-height: 1;
   padding-top:0px;
@@ -26,8 +26,8 @@ h1 {
   font-family: 'Laila', serif;
   text-align: center;
   font-weight: bold;
-  color: #555;
-  text-shadow: 1px 1px 0 #fff;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000;
 }
 
 
