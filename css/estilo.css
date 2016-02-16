@@ -149,5 +149,30 @@ form td {
     margin-left: 70px;
     display: block;
 }
-=======
->>>>>>> 17ea5c8d5f5ad18c7ded7edd6cca77693ddb5294
+
+/*Descripcion articulo*/
+
+#mini-imgs{
+    display: block;
+    width: 100%;
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    border: none;
+}
+
+#mini-imgs button{
+    display: inline;
+    height: 50px;
+    width: 90px;
+    padding: 0;
+    border: dashed 1px #EB9B4D;
+    background: none;
+}
+
+button img{
+    width: 70px;
+    height: 100%;
+}
+
+
